@@ -37,7 +37,8 @@ This repository documents my **project-based learning journey in ML & DL**:
 |Day| Date |Concepts | Status|
 |---|---------|--------|-------------------------|
 |1|21/5/2025|Data understanding|![Completed](https://img.shields.io/badge/Completed-%2300C851?style=for-the-badge&logo=github)|
-
+|2|22/5/2025|Data preprocessing|![Completed](https://img.shields.io/badge/Completed-%2300C851?style=for-the-badge&logo=github)|
+|3|23/5/2025|Data exploration|![Completed](https://img.shields.io/badge/Completed-%2300C851?style=for-the-badge&logo=github)|
 > Each project folder contains the **notebook** and a **mini README** describing the project, dataset, and insights.
 
 ---
