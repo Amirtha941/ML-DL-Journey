@@ -1,4 +1,6 @@
-### 1. **Categorical (Qualitative) Data**
+# 💡 Data Categorization
+
+### 🔹 1. **Categorical (Qualitative) Data**
 
 These are labels or names used to identify categories. They don’t have numerical meaning.
 
@@ -95,7 +97,7 @@ Datasets that combine multiple types—common in real-world applications.
         
     -   Status message (Textual)
 
- ## fillna()
+ ## 🧩 fillna()
 
  
 `fillna()` is a powerful method in **Pandas** used to handle **missing data** (i.e., `NaN` values) in a DataFrame or Series. It lets you **fill in gaps** with specified values or strategies—essential for cleaning datasets before analysis or modeling.
@@ -152,7 +154,7 @@ For ML workflows, missing values can break models or skew results. `fillna()` he
     
 -   Prepare clean inputs for training   
 
-## groupby()
+## 🧩 groupby()
 
 `groupby()` in **Pandas** is one of the most powerful tools for data analysis—it lets you **split your data into groups**, apply operations to each group, and then **combine the results**. This is often referred to as the **Split–Apply–Combine** strategy.
 
