@@ -151,3 +151,71 @@ For ML workflows, missing values can break models or skew results. `fillna()` he
 -   Avoid dropping valuable rows
     
 -   Prepare clean inputs for training   
+
+## groupby()
+
+`groupby()` in **Pandas** is one of the most powerful tools for data analysis—it lets you **split your data into groups**, apply operations to each group, and then **combine the results**. This is often referred to as the **Split–Apply–Combine** strategy.
+
+### 🔧 Syntax
+```
+df.groupby('column_name')
+```
+
+You can also group by multiple columns:
+```
+df.groupby(['col1', 'col2'])
+```
+
+### 🧠 What You Can Do with `groupby()`
+
+|    Operation    |           Example Use Case          |
+|:---------------:|:-----------------------------------:|
+| .sum()          | Total sales per product category    |
+| .mean()         | Average temperature per sensor      |
+| .count()        | Number of entries per device        |
+| .max() / .min() | Highest/lowest reading per location |
+| .agg()          | Apply multiple functions at once    |
+
+### 🔍 Breakdown of `df.groupby('churn_label')[numeric_cols]`
+
+-   `df`: Your DataFrame—likely containing customer or user data.
+    
+-   `.groupby('churn_label')`: Splits the data into groups based on the values in the `'churn_label'` column. For example:
+    
+    -   `churn_label = 0`: Customers who didn’t churn
+        
+    -   `churn_label = 1`: Customers who did churn
+        
+-   `[numeric_cols]`: Selects only the numeric columns from each group. This assumes `numeric_cols` is a list of column names like:
+    
+    ```
+    numeric_cols = ['tenure', 'monthly_charges', 'total_charges']
+    ```
+    
+
+### 🧠 What You Can Do Next
+
+Once grouped, you can apply aggregation functions:
+```
+df.groupby('churn_label')[numeric_cols].mean()   # Average values per churn group
+df.groupby('churn_label')[numeric_cols].sum()    # Total values per churn group
+df.groupby('churn_label')[numeric_cols].count()  # Number of entries per group
+```
+
+### 📊 Example Output
+
+If you run:
+
+```
+df.groupby('churn_label')[numeric_cols].mean()
+```
+You might get:
+
+### 📊 Example
+
+| churn_label | tenure | monthly_charges | total_charges |
+|:-----------:|:------:|:---------------:|:-------------:|
+| 0           | 32.5   | 65.4            | 2100.3        |
+| 1           | 12.1   | 75.2            | 890.7         |
+
+This tells you that churned customers tend to have shorter tenure and higher monthly charges—valuable insight for retention strategies.
